@@ -1,2 +1,48 @@
-@import 'fonts';
+@import 'fonts', 'mixins';
 
+*{
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: 'Roboto', Arial, SansSerif;
+}
+
+.main-header {
+  width: 1200px;
+  padding: 50px 20px 0;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  @include fontMedium;
+  color: #000;
+}
+
+.main-header__nav {
+  display: flex;
+  min-width: 800px;
+  justify-content: space-between;
+}
+
+.header-nav-list {
+  display: flex;
+  align-items: stretch;
+  li {
+    align-self: center;
+    margin-left: 45px;
+    a {
+      color: inherit;
+    }
+  }
+}
+
+.user-menu-cart {
+  list-style: none;
+  button {
+    border: none;
+    background-color: transparent;
+    @include fontMedium;
+  }
+}
