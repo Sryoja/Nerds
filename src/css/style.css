@@ -43,6 +43,12 @@ body {
   text-transform: uppercase;
   color: #000; }
 
+.main-logo-link img:hover {
+  opacity: 0.8; }
+
+.main-logo-link img:active {
+  opacity: 0.3; }
+
 .main-header__nav {
   display: flex;
   min-width: 800px;
@@ -57,12 +63,37 @@ body {
     .header-nav-list li a {
       color: inherit; }
 
+.user-menu {
+  display: flex;
+  align-items: stretch; }
+
 .user-menu-cart {
-  list-style: none; }
+  position: relative;
+  align-self: center; }
+  .user-menu-cart::before {
+    content: '';
+    background-image: url("../img/cart-icon.svg");
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: 8px;
+    left: -28px; }
   .user-menu-cart button {
     border: none;
     background-color: transparent;
     font-weight: 500;
     line-height: 30px;
     font-size: 16px;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    cursor: pointer;
+    outline: none; }
+
+.header-state:hover {
+  color: #fb565a; }
+
+.header-state:active, .header-state:focus {
+  color: #000;
+  opacity: 0.3; }
+
+.header-state--active {
+  border-bottom: 2px solid #fb565a; }

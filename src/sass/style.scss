@@ -26,6 +26,17 @@ body {
   color: #000;
 }
 
+.main-logo-link{
+  img{
+    &:hover{
+      opacity: 0.8;
+    }
+    &:active{
+      opacity: 0.3;
+    }
+  }
+}
+
 .main-header__nav {
   display: flex;
   min-width: 800px;
@@ -44,11 +55,41 @@ body {
   }
 }
 
+.user-menu {
+  display: flex;
+  align-items: stretch;
+}
+
 .user-menu-cart {
-  list-style: none;
+  position: relative;
+  align-self: center;
+  &::before {
+    content: '';
+    background-image: url('../img/cart-icon.svg');
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: 8px;
+    left: -28px;
+  }
   button {
     border: none;
     background-color: transparent;
     @include fontMedium;
+    cursor: pointer;
+    outline: none;
+  }
+}
+
+.header-state{
+  &:hover{
+    color: #fb565a;
+  }
+  &:active, &:focus{
+    color: #000;
+    opacity: 0.3;
+  }
+  &--active{
+    border-bottom: 2px solid #fb565a;
   }
 }
