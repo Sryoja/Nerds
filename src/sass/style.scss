@@ -12,6 +12,26 @@ a {
   text-decoration: none;
 }
 
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+
+.btn-common-style {
+  font-family: 'roboto', Arial, SansSerif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  border-radius: 2px;
+}
+
 body {
   font-family: 'Roboto', Arial, SansSerif;
 }
@@ -26,12 +46,12 @@ body {
   color: #000;
 }
 
-.main-logo-link{
-  img{
-    &:hover{
+.main-logo-link {
+  img {
+    &:hover {
       opacity: 0.8;
     }
-    &:active{
+    &:active {
       opacity: 0.3;
     }
   }
@@ -81,15 +101,94 @@ body {
   }
 }
 
-.header-state{
-  &:hover{
+.header-state {
+  &:hover {
     color: #fb565a;
   }
-  &:active, &:focus{
+  &:active, &:focus {
     color: #000;
     opacity: 0.3;
   }
-  &--active{
+  &--active {
     border-bottom: 2px solid #fb565a;
+  }
+}
+
+//main slider
+
+main {
+  width: 1200px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.slider1 {
+  display: flex;
+  display: none;
+  justify-content: flex-start;
+  align-items: stretch;
+  padding-bottom: 80px;
+  background: url(../img/slide1.png) no-repeat 93% center; //todo разобраться как вставить изображения
+  .slider__desc {
+    width: 380px;
+  }
+  .slider__desc-title{
+    width: 350px;
+  }
+}
+
+.slider__desc-slogan {
+  margin: 0;
+  margin-top: 67px;
+  font-family: 'Roboto', Arial, SansSerif;
+  font-weight: 500;
+  font-size: 55px;
+  line-height: 55px;
+}
+
+.slider__desc-title {
+  margin: 0;
+  margin-top: 28px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.slider__desc-link {
+  display: inline-block;
+  margin-top: 40px;
+  padding: 16px 55px;
+  color: #fff;
+  background-color: #fb565a;
+  &:hover, &:focus{
+    background-color: #e74246;
+    outline: none;
+  }
+  &:active{
+    background-color: #d7373b;
+    color: rgba(255, 255, 255, 0.3);
+    box-shadow: inset 0px 3px 0px 0px rgba(0,0,0,0.1);
+  }
+}
+
+.slider2  {
+  //display: none;
+  background: url(../img/slide2.png) no-repeat 93% center;
+  .slider__desc{
+    width: 580px;
+  }
+  .slider__desc-title{
+    width: 410px;
+  }
+}
+
+.slider3  {
+  display: none;
+  background: url(../img/slide3.png) no-repeat top right;
+  .slider__desc {
+    width: 410px;
+  }
+  .slider__desc-title{
+    width: 370px;
   }
 }
