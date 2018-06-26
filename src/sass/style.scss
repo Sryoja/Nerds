@@ -37,14 +37,20 @@ body {
 }
 
 .main-header {
+  background-color: #eeeeee;
+}
+
+.header-wrapper{
   width: 1200px;
-  padding: 50px 20px 0;
   margin: 0 auto;
+  padding: 50px 20px 0;
   display: flex;
   justify-content: space-between;
   @include fontMedium;
   color: #000;
+
 }
+
 
 .main-logo-link {
   img {
@@ -116,19 +122,25 @@ body {
 
 //main slider
 
-main {
+.sliders-wrapper{
+  background-color: #eeeeee;
+
+}
+
+.sliders{
   width: 1200px;
-  padding: 0 20px;
+  padding: 67px 20px 79px;
   margin: 0 auto;
 }
 
 .slider1 {
+  position: relative;
   display: flex;
-  display: none;
+  //display: none;
   justify-content: flex-start;
   align-items: stretch;
   padding-bottom: 80px;
-  background: url(../img/slide1.png) no-repeat 93% center; //todo разобраться как вставить изображения
+  background-size: contain;
   .slider__desc {
     width: 380px;
   }
@@ -137,9 +149,19 @@ main {
   }
 }
 
+.slider1-img{
+  position: absolute;
+  right: 30px;
+  bottom: 0;
+  width: 698px;
+  height: 413px;
+  background: url(../img/slide1.png) no-repeat center;
+
+}
+
 .slider__desc-slogan {
   margin: 0;
-  margin-top: 67px;
+  //margin-top: 67px;
   font-family: 'Roboto', Arial, SansSerif;
   font-weight: 500;
   font-size: 55px;
@@ -172,8 +194,9 @@ main {
 }
 
 .slider2  {
-  //display: none;
+  display: none;
   background: url(../img/slide2.png) no-repeat 93% center;
+  background-size: contain;
   .slider__desc{
     width: 580px;
   }
