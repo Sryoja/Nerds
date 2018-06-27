@@ -40,12 +40,14 @@ a {
   overflow: hidden; }
 
 .btn-common-style {
+  display: inline-block;
   font-family: 'roboto', Arial, SansSerif;
   font-weight: 500;
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
-  border-radius: 2px; }
+  border-radius: 2px;
+  color: white; }
 
 body {
   font-family: 'Roboto', Arial, SansSerif; }
@@ -121,12 +123,12 @@ body {
   border-bottom: 2px solid #fb565a; }
 
 .sliders-wrapper {
-  background-color: #eeeeee; }
-
-.sliders {
   width: 1200px;
   padding: 67px 20px 0;
   margin: 0 auto; }
+
+.sliders {
+  background-color: #eeeeee; }
 
 .slider1 {
   position: relative;
@@ -206,3 +208,68 @@ body {
   width: 757px;
   height: 413px;
   background: url(../img/slide3.png) no-repeat center; }
+
+.articles {
+  width: 1200px;
+  padding: 80px 20px 80px;
+  margin: 0 auto;
+  display: flex;
+  border-bottom: 2px solid #eeeeee; }
+
+.articles__item {
+  width: 300px; }
+  .articles__item:not(:last-child) {
+    margin-right: 100px; }
+
+.articles__item-title {
+  font-family: 'roboto', Arial, SansSerif;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 24px;
+  line-height: 30px;
+  color: black;
+  margin: 0;
+  margin-top: 20px; }
+
+.articles__item-desc {
+  font-family: 'roboto', Arial, SansSerif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #283136;
+  margin: 0;
+  margin-top: 17px; }
+
+.articles__item-link {
+  padding: 16px 40px;
+  margin-top: 32px; }
+
+.link-red {
+  background-color: #fb565a; }
+  .link-red:hover, .link-red:focus {
+    background-color: #e74246;
+    outline: none; }
+  .link-red:active {
+    background-color: #d7373b;
+    color: rgba(255, 255, 255, 0.3);
+    box-shadow: inset 0px 3px 0px 0px rgba(0, 0, 0, 0.1); }
+
+.link-green {
+  background-color: #00ca74; }
+  .link-green:hover, .link-green:focus {
+    background-color: #00aa62;
+    outline: none; }
+  .link-green:active {
+    background-color: #00aa62;
+    color: rgba(255, 255, 255, 0.3);
+    box-shadow: inset 0px 3px 0px 0px rgba(0, 0, 0, 0.1); }
+
+.link-yellow {
+  background-color: #efc84a; }
+  .link-yellow:hover, .link-yellow:focus {
+    background-color: #eab534;
+    outline: none; }
+  .link-yellow:active {
+    background-color: #e5a722;
+    color: rgba(255, 255, 255, 0.3);
+    box-shadow: inset 0px 3px 0px 0px rgba(0, 0, 0, 0.1); }
